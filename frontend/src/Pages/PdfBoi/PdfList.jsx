@@ -96,7 +96,7 @@ export default function PdfList(){
       
       {books_config.length === 0 && <EmptyCase />}
       
-      <div className="grid gap-3">
+      <div className="grid md:grid-cols-2 gap-3">
         
         {
           books_config.map((book)=>{
