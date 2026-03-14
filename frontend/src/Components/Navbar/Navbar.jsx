@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import Sidebar from "./Sidebar.jsx"
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
   
+  const Navigate = useNavigate()
   const [sidebar,setSidebar] = useState(false)
   
   function onMenuClick(){
@@ -39,7 +41,7 @@ const Navbar = () => {
           </svg>
         </button>
         
-        <button className="bg-white/20 p-2 rounded-xl border border-white/10">
+        <button onClick={()=>Navigate("/admin-login")} className="bg-white/20 p-2 rounded-xl border border-white/10">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
             <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
             <circle cx="12" cy="7" r="4" />
